@@ -39,8 +39,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="image-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-large btn-warning btn-block btn-sm" href="#reserve">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -62,7 +65,7 @@
                     </div>
                 </div>
             </div>
-        </div> class="col-12 col-sm"
+        </div>
 
 
         <div class="row row-content align-items-center">
@@ -70,8 +73,13 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm col-md">
-                <h2>Weekend Grand class="col-12 col-sm-4 col-md-3" Buffet</h2>
-                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+                </div>
             </div>
         </div>
 
@@ -90,6 +98,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row row-content align-items-center" id="reserve">
+            <div class="col-12 col-sm-2"></div>
+            <div class="col-12 col-sm-8">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="Number of Guests" class="col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-md-8" id="rad">
+                                <input name="number" type="radio">1
+                                <input name="number" type="radio">2
+                                <input name="number" type="radio">3
+                                <input name="number" type="radio">4
+                                <input name="number" type="radio">5
+                                <input name="number" type="radio">6
+                            </div>
+                       </div>
+                        <div class="form-group row">
+                            <label for="date & time" class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-md-8">
+                            <input type="text" name="date" id="date" placeholder="Date">
+                            <input type="text" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+            <div class="col-12 col-sm-2"></div> 
         </div>
     </div>
 
