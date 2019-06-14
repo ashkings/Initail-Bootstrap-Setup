@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -100,12 +102,12 @@
                         <div class="form-group row">
                             <label for="Number of Guests" class="col-sm-2 col-form-label">Number of Guests</label>
                             <div class="col-sm" id="rad">
-                                <input name="number" type="radio">1
-                                <input name="number" type="radio">2
-                                <input name="number" type="radio" checked>3
-                                <input name="number" type="radio">4
-                                <input name="number" type="radio">5
-                                <input name="number" type="radio">6
+                                <input name="number" type="radio" required>1
+                                <input name="number" type="radio" required>2
+                                <input name="number" type="radio" required>3
+                                <input name="number" type="radio" required>4
+                                <input name="number" type="radio" required>5
+                                <input name="number" type="radio" required>6
                             </div>
                         </div>
                         <div class="form-group row">
@@ -124,10 +126,10 @@
                         <div class="form-group row">
                             <label for="date & time" class="col-sm-2 col-form-label">Date and Time</label>
                             <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="Date">
+                            <input class="form-control" type="date" placeholder="Date" name="date" required>
                             </div>
                             <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="Time">
+                            <input class="form-control" type="time" placeholder="Time" name="time" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -253,14 +255,14 @@
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
+                      121, Clear Water Bay Road<br>
+                      Clear Water Bay, Kowloon<br>
+                      HONG KONG<br>
                       <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
                       <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
                       <i class="fa fa-envelope fa-lg"></i>: 
                       <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
+                   </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
@@ -281,63 +283,13 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script>
-      $(document).ready(function(){
-        $('#mycarousel').carousel({interval:2000});
-        $("#carouselButton").click(function(){
-            if($('#carouselButton').children("span").hasClass('fa-pause')){
-                $('#mycarousel').carousel('pause');
-                $('#carouselButton').children("span").removeClass('fa-pause');
-                $('#carouselButton').children("span").addClass('fa-play');
-            }
-            else if($('#carouselButton').children("span").hasClass('fa-play')){
-                $('#mycarousel').carousel('cycle');
-                $('#carouselButton').children("span").removeClass('fa-play');
-                $('#carouselButton').children("span").addClass('fa-pause');
-            }
-            });
-        });
-    </script>
-    <!-- jQuery for modals -->
-    <script>
-     $(document).ready(function(){
-        $("#reserve_button").click(function(){
-            $("#reserve").modal('show');
-        });
-        $("#Login").click(function(){
-            $("#loginModal").modal('show');
-        });
-
-        $(".dismiss").click(function(){
-            $("#loginModal").modal('hide');
-        });
-
-        $(".dismiss").click(function(){
-            $("#reserve").modal('hide');
-        });
-     });
-    </script>
-    <!-- jQuery for smoking and non-smoking buttons -->
-    <script>
-     $(document).ready(function(){
-        $("#btn-2").click(function(){
-            if($("#btn-1").hasClass('active')){
-            $("#btn-1").removeClass('active');
-            $("#btn-2").addClass('active');
-        }
-        });
-        $("#btn-1").click(function(){
-            if($("#btn-2").hasClass('active')){
-            $("#btn-2").removeClass('active');
-            $("#btn-1").addClass('active');
-        }
-        });
-     });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
     </body>
 
-</html>
+</html> 
