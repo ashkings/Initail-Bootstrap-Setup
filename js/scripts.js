@@ -1,6 +1,7 @@
-      $(document).ready(function(){
+   $(document).ready(function()
+    {
         $('#mycarousel').carousel({interval:2000});
-        $("#carouselButton").click(function(){
+        $('#mycarousel').click(function(){
             if($('#carouselButton').children("span").hasClass('fa-pause')){
                 $('#mycarousel').carousel('pause');
                 $('#carouselButton').children("span").removeClass('fa-pause');
@@ -11,11 +12,7 @@
                 $('#carouselButton').children("span").removeClass('fa-play');
                 $('#carouselButton').children("span").addClass('fa-pause');
             }
-            });
-    
-
-    <!-- jQuery for modals -->
-    
+        });
 
         $("#reserve_button").click(function(){
             $("#reserve").modal('show');
@@ -32,10 +29,6 @@
             $("#reserve").modal('hide');
         });
 
-
-    <!-- jQuery for smoking and non-smoking buttons -->
-     
-
         $("#btn-2").click(function(){
             if($("#btn-1").hasClass('active')){
             $("#btn-1").removeClass('active');
@@ -48,4 +41,4 @@
             $("#btn-1").addClass('active');
         }
         });
-    };
+    });
